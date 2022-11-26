@@ -11,7 +11,7 @@ public class MiddleApplication {
     public static void main(String[] args) {
         SpringApplication.run(MiddleApplication.class, args);
     }
-    @GetMapping
+    @GetMapping(path="/test")
     public String getData(){
         return "Hello World!";
     }
