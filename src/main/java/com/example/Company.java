@@ -12,7 +12,7 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Middle {
+public class Company {
     @Id
     @GeneratedValue
     private int id;
