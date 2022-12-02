@@ -16,7 +16,18 @@ public class CompanyService {
     }
 
     public Optional<Company> getCompanyInfo(String domain) throws IOException {
-        addCompany(Company.builder().domain(domain).build());
+//        if it is already in database, just return the info
+        if (!companyRepository.findByDomain(domain).isEmpty()){
+            return companyRepository.findByDomain(domain);
+        }
+
+        Parser parser = new Parser(domain);
+        addCompany(Company.builder().
+                domain(domain).
+                facebook(parser.getFacebook()).
+                twitter(parser.getTwitter()).
+                icon(parser.getIcon()).
+                build());
         return companyRepository.findByDomain(domain);
     }
 
@@ -24,13 +35,11 @@ public class CompanyService {
         return companyRepository.findAll();
     }
 
-    public void addCompany(Company company) throws IOException {
-        if (companyRepository.findByDomain(company.getDomain()).isEmpty()){
-            Parser parser = new Parser(company.getDomain());
-            company.setFacebook(parser.getFacebook());
-            company.setTwitter(parser.getTwitter());
-            company.setIcon(parser.getIcon());
-            companyRepository.save(company);
+    public void addCompany(Company company) {
+        Optional<Company> companyInDatabase = companyRepository.findByDomain(company.getDomain());
+        if (!companyInDatabase.isEmpty()){
+            companyRepository.deleteById(companyInDatabase.get().getId());
         }
+        companyRepository.save(company);
     }
 }

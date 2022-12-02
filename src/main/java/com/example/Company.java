@@ -20,7 +20,7 @@ public class Company {
     private String name;
     private String logo;
     private String icon;
-    private String empoyees;
+    private int employees;
     private String address;
     private String domain;
 }

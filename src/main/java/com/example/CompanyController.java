@@ -28,7 +28,7 @@ public class CompanyController {
     }
 
     @PostMapping
-    public void addCompany(@RequestBody Company company) throws IOException {
+    public void addCompany(@RequestBody Company company) {
         companyService.addCompany(company);
     }
 }
