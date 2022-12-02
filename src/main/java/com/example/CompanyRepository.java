@@ -8,6 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface CompanyRepository extends JpaRepository<Company, Integer> {
-    @Query("SELECT c FROM Company c WHERE c.name = ?1")
-    Optional<Company> findByName(String name);
+    @Query("SELECT c FROM Company c WHERE c.domain = ?1")
+    Optional<Company> findByDomain(String domain);
 }

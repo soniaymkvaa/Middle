@@ -1,26 +1,30 @@
-GET http://localhost:8080/api/v1/company/softserve
-
-###
-POST http://localhost:8080/api/v1/company
-Content-Type: application/json
-
-{
-  "name": "softserve"
-}
-
-###
 GET http://localhost:8080/api/v1/company/ucu.edu.ua
 
 ###
+GET http://localhost:8080/api/v1/company/elex.com
+
+###
+GET http://localhost:8080/api/v1/company/softserve.com
+
+###
+GET http://localhost:8080/api/v1/company
+
+###
+GET http://localhost:8080/api/v1/company/edx.org
+
+###
 POST http://localhost:8080/api/v1/company
 Content-Type: application/json
 
 {
-  "name": "ucu.edu.ua"
+  "domain": "ucu.edu.ua"
 }
 
 ###
-GET http://localhost:8080/api/v1/company/elex
+POST http://localhost:8080/api/v1/company
+Content-Type: application/json
 
-###
-GET http://localhost:8080/api/v1/company
+{
+  "name": "softserve",
+  "domain": "softserve.com"
+}

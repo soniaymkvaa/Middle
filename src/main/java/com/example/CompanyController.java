@@ -3,6 +3,7 @@ package com.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,9 +17,9 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
-    @GetMapping(path = "/{companyName}")
-    public Optional<Company> getCompanyInfo(@PathVariable("companyName") String name) {
-        return companyService.getCompanyInfo(name);
+    @GetMapping(path = "/{companyDomain}")
+    public Optional<Company> getCompanyInfo(@PathVariable("companyDomain") String domain) throws IOException {
+        return companyService.getCompanyInfo(domain);
     }
 
     @GetMapping
@@ -27,7 +28,7 @@ public class CompanyController {
     }
 
     @PostMapping
-    public void addCompany(@RequestBody Company company) {
+    public void addCompany(@RequestBody Company company) throws IOException {
         companyService.addCompany(company);
     }
 }

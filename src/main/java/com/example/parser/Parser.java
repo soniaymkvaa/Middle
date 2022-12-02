@@ -9,23 +9,23 @@ import java.util.ArrayList;
 
 
 public class Parser {
-    private String url=null;
+    private String domain = null;
     private Document doc = null;
 
     public void parse() throws IOException {
         Document document = null;
         try{
-                document = Jsoup.connect(url)
+                document = Jsoup.connect("https://" + domain)
                 .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                 .get();
         }
         catch (Exception e){
             System.out.println("Not parsable by jsoup(((");
         }
-        finally{this.doc = document;}
+        finally{doc = document;}
     }
-    public Parser(String domain) throws IOException {
-        url = domain;
+    public Parser(String domain_company) throws IOException {
+        domain = domain_company;
         parse();
     }
     @SneakyThrows

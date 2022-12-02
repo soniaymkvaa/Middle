@@ -1,10 +1,7 @@
 package com.example;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -12,6 +9,7 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Company {
     @Id
     @GeneratedValue
@@ -24,4 +22,5 @@ public class Company {
     private String icon;
     private String empoyees;
     private String address;
+    private String domain;
 }
