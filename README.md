@@ -1,6 +1,6 @@
 # Middle
 # Our Site
-Deployed on Heroku [here](coming soon)
+Deployed on Heroku [here](https://stormy-meadow-76982.herokuapp.com/api/v1/company/ucu.edu.ua)
 # Use Case Diagram
 ![image](https://user-images.githubusercontent.com/91615487/205441658-7bde3713-2c8a-490f-8919-e7fa5b3d0cbd.png)
 
