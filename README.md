@@ -7,6 +7,6 @@ Deployed on Heroku [here](coming soon)
 
 Link to it is [here](https://drive.google.com/file/d/1sbqMWllOCk__RWYNQouIqdWPiZuVh0YC/view?usp=sharing)
 # UML Diagram
-Link to it is [here](coming soon)
+Link to it is [here](https://github.com/soniaymkvaa/Middle/blob/master/uml_diagram.png?raw=true)
 # Patterns used
 Are described [here](https://github.com/soniaymkvaa/Middle/blob/master/patterns.txt) 
