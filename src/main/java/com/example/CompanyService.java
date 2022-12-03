@@ -1,6 +1,8 @@
 package com.example;
 
+import com.example.merger.Merger;
 import com.example.parser.Parser;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -15,19 +17,11 @@ public class CompanyService {
         this.companyRepository = companyRepository;
     }
 
-    public Optional<Company> getCompanyInfo(String domain) throws IOException {
-//        if it is already in database, just return the info
-        if (!companyRepository.findByDomain(domain).isEmpty()){
-            return companyRepository.findByDomain(domain);
+    public Optional<Company> getCompanyInfo(String domain) throws IOException, UnirestException, InterruptedException {
+        if (companyRepository.findByDomain(domain).isEmpty()){
+            Merger merger = new Merger(domain);
+            addCompany(merger.getCompany());
         }
-
-        Parser parser = new Parser(domain);
-        addCompany(Company.builder().
-                domain(domain).
-                facebook(parser.getFacebook()).
-                twitter(parser.getTwitter()).
-                icon(parser.getIcon()).
-                build());
         return companyRepository.findByDomain(domain);
     }
 
@@ -36,10 +30,10 @@ public class CompanyService {
     }
 
     public void addCompany(Company company) {
-        Optional<Company> companyInDatabase = companyRepository.findByDomain(company.getDomain());
-        if (!companyInDatabase.isEmpty()){
-            companyRepository.deleteById(companyInDatabase.get().getId());
-        }
+//        Optional<Company> companyInDatabase = companyRepository.findByDomain(company.getDomain());
+//        if (!companyInDatabase.isEmpty()){
+//            companyRepository.deleteById(companyInDatabase.get().getId());
+//        }
         companyRepository.save(company);
     }
 }

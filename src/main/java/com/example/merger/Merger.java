@@ -64,6 +64,7 @@ public class Merger {
 
     public Company getCompany(){
         return Company.builder()
+                .domain(domain)
                 .name(getName())
                 .twitter(getTwitter())
                 .facebook(getFacebook())

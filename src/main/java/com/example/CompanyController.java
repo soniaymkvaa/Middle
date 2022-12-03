@@ -1,5 +1,6 @@
 package com.example;
 
+import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class CompanyController {
     }
 
     @GetMapping(path = "/{companyDomain}")
-    public Optional<Company> getCompanyInfo(@PathVariable("companyDomain") String domain) throws IOException {
+    public Optional<Company> getCompanyInfo(@PathVariable("companyDomain") String domain) throws IOException, UnirestException, InterruptedException {
         return companyService.getCompanyInfo(domain);
     }
 
