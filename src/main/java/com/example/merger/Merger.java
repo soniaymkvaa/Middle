@@ -1,5 +1,6 @@
 package com.example.merger;
 
+import com.example.Company;
 import com.example.brandfetch.Brandfetch;
 import com.example.google.GooglePlaces;
 import com.example.parser.Parser;
@@ -7,7 +8,6 @@ import com.example.pdl.PDL;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
 import java.io.IOException;
-
 public class Merger {
     private String domain;
     private GooglePlaces googleResponse;
@@ -60,5 +60,17 @@ public class Merger {
     }
     public String getAddress(){
         return googleResponse.getAddress();
+    }
+
+    public Company getCompany(){
+        return Company.builder()
+                .name(getName())
+                .twitter(getTwitter())
+                .facebook(getFacebook())
+                .logo(getLogo())
+                .icon(getIcon())
+                .employees(getEmployees())
+                .address(getAddress())
+                .build();
     }
 }
