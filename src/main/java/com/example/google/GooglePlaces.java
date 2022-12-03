@@ -8,14 +8,19 @@ public class GooglePlaces {
     private String domain;
     @SneakyThrows
     public String getAddress(){
-        String API_KEY = "AIzaSyBQZksp4BmTesvoWSH6LWdo1sN8zCmt5aU";
-        GeoApiContext context = new GeoApiContext.Builder()
-                .apiKey(API_KEY)
-                .build();
-        PlacesSearchResponse placesRespose = new TextSearchRequest(context).query(domain).await();
-        String address = placesRespose.results[0].formattedAddress;
-        context.shutdown();
-        return address;
+        try {
+            String API_KEY = "AIzaSyBQZksp4BmTesvoWSH6LWdo1sN8zCmt5aU";
+            GeoApiContext context = new GeoApiContext.Builder()
+                    .apiKey(API_KEY)
+                    .build();
+            PlacesSearchResponse placesRespose = new TextSearchRequest(context).query(domain).await();
+            String address = placesRespose.results[0].formattedAddress;
+            context.shutdown();
+            return address;
+        }
+        catch (Exception e){
+            return null;
+        }
     }
     public GooglePlaces(String domain_company){
         domain = domain_company;
