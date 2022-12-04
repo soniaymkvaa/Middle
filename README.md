@@ -10,3 +10,14 @@ Link to it is [here](https://drive.google.com/file/d/1sbqMWllOCk__RWYNQouIqdWPiZ
 Link to it is [here](https://github.com/soniaymkvaa/Middle/blob/master/uml_diagram.png?raw=true)
 # Patterns used
 Are described [here](https://github.com/soniaymkvaa/Middle/blob/master/patterns.txt) 
+
+# How to use
+To get info about some domain type ```https://stormy-meadow-76982.herokuapp.com/api/v1/company``` (for local host: ```http://localhost:8080/api/v1/company```) and add ```/domain```<br><br>
+To get info about all domains that are already in database just type ```https://stormy-meadow-76982.herokuapp.com/api/v1/company``` for heroku and ```http://localhost:8080/api/v1/company``` for local host
+
+Examples of get requests can be found in [test.http](https://github.com/soniaymkvaa/Middle/blob/master/test.http)
+- for local host
+![image](https://user-images.githubusercontent.com/91982071/205481550-4e847574-adb4-48c2-92ab-a283cb5e3c41.png)
+
+- for heroku
+![image](https://user-images.githubusercontent.com/91982071/205481576-059b6e3c-c312-46a7-9dd6-1d128c53034a.png)
