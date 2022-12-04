@@ -28,7 +28,8 @@ Examples of get requests can be found in [test.http](https://github.com/soniaymk
 ![image](https://user-images.githubusercontent.com/91982071/205482148-0502920b-e032-4205-bd10-0bfb353fb4ef.png)
 ![image](https://user-images.githubusercontent.com/91982071/205482103-ed9bd1aa-209d-4f34-9acf-bc54956c00f4.png)
 
-Patterns we used:
+# Patterns we used:
+
 In this midtherm project, we used such OOP patterns that helps us.
 1) Proxy
 It`s a structural design pattern that receives client requests, performs some work, and then passes the request to an object. it is useful when we want to add additional methods to an object of an existing class without changing the client code.
