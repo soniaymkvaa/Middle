@@ -1,6 +1,9 @@
 GET http://localhost:8080/api/v1/company/ucu.edu.ua
 
 ###
+GET http://localhost:8080/api/v1/company/edx.org
+
+###
 GET http://localhost:8080/api/v1/company/elex.com
 
 ###
@@ -10,4 +13,16 @@ GET http://localhost:8080/api/v1/company/softserveinc.com
 GET http://localhost:8080/api/v1/company
 
 ###
-GET http://localhost:8080/api/v1/company/edx.org
+GET https://stormy-meadow-76982.herokuapp.com/api/v1/company/ucu.edu.ua
+
+###
+GET https://stormy-meadow-76982.herokuapp.com/api/v1/company/edx.org
+
+###
+GET https://stormy-meadow-76982.herokuapp.com/api/v1/company/elex.com
+
+###
+GET https://stormy-meadow-76982.herokuapp.com/api/v1/company/softserveinc.com
+
+###
+GET https://stormy-meadow-76982.herokuapp.com/api/v1/company
