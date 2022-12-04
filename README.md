@@ -24,6 +24,7 @@ Examples of get requests can be found in [test.http](https://github.com/soniaymk
 
 # Examples
 ![image](https://user-images.githubusercontent.com/91982071/205482130-29e4d27a-f96a-4e7f-81d4-32b084150320.png)
+![image](https://user-images.githubusercontent.com/91982071/205483162-77f9c0c4-6985-4fa4-bd2f-2b82413aef28.png)
 ![image](https://user-images.githubusercontent.com/91982071/205482148-0502920b-e032-4205-bd10-0bfb353fb4ef.png)
 ![image](https://user-images.githubusercontent.com/91982071/205482103-ed9bd1aa-209d-4f34-9acf-bc54956c00f4.png)
 
