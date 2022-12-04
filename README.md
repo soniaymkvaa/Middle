@@ -21,3 +21,9 @@ Examples of get requests can be found in [test.http](https://github.com/soniaymk
 
 - for heroku
 ![image](https://user-images.githubusercontent.com/91982071/205481576-059b6e3c-c312-46a7-9dd6-1d128c53034a.png)
+
+# Examples
+![image](https://user-images.githubusercontent.com/91982071/205482130-29e4d27a-f96a-4e7f-81d4-32b084150320.png)
+![image](https://user-images.githubusercontent.com/91982071/205482148-0502920b-e032-4205-bd10-0bfb353fb4ef.png)
+![image](https://user-images.githubusercontent.com/91982071/205482103-ed9bd1aa-209d-4f34-9acf-bc54956c00f4.png)
+
