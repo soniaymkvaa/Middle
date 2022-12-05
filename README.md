@@ -10,7 +10,7 @@ Link to it is [here](https://drive.google.com/file/d/1sbqMWllOCk__RWYNQouIqdWPiZ
 
 ![uml_diagram](https://user-images.githubusercontent.com/96056537/205756892-0c0c64b3-927c-4c80-8956-47752a4cfc5d.png)
 
-Link to it is [here](https://github.com/soniaymkvaa/Middle/blob/master/uml_diagram.png?raw=true)
+Link to it is [here](https://raw.githubusercontent.com/soniaymkvaa/Middle/master/uml_diagram.png)
 # Patterns used
 Are described [here](https://github.com/soniaymkvaa/Middle/blob/master/patterns.txt) 
 
